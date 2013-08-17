@@ -87,7 +87,7 @@ public class NativeLoader {
 	 * NativeLoader.class location.
 	 */
 	public NativeLoader() {
-		mLibPath = "lib/";
+		mLibPath = "/lib/";
 		relativeToClass = true;
 	}
 	

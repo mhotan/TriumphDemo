@@ -1,14 +1,16 @@
 package org.alljoyn.triumph.demo.objects;
 
 import org.alljoyn.bus.annotation.BusSignalHandler;
+import org.alljoyn.triumph.demo.ifaces.SignalsInterface;
 import org.alljoyn.triumph.demo.ifaces.Struct;
 
 /**
  * Simple signal handler for handling simple signals from triumph
  * @author mhotan
  */
-public class MySignalHandler extends DemoObject {
-	
+public class MySignalHandler extends DemoObject implements SignalsInterface {
+
+    
 	@BusSignalHandler(iface="org.alljoyn.triumph.demo.ifaces.SignalsInterface", signal="signalString")
 	public void signalString(String s) {
 		print(s);
